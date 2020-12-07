@@ -3,7 +3,7 @@ iptables -I INPUT -s 192.168.27.0/24 -i ens192 -j DROP
 iptables -I FORWARD -s 192.168.27.0/24 -i ens192 -j DROP
 
 #Rule to prevent external hosts from accessing the logging server
-iptables -I FORWARD -p udp -d 192.168.27.51 –dport 514 -j DROP
+#iptables -I FORWARD -p udp -–dport 514 -j DROP
 
 #Webserver Inbound Rate Limiting
 iptables -I FORWARD -p tcp -i ens192 --dport 80 -j DROP
